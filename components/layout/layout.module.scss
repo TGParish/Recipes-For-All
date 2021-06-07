@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 50px minmax(900px, auto) 75px;
+  background-color: rgb(3, 16, 26);
+}
+
+.navbar {
+  grid-row: 1/2;
+  grid-column: 1/-1;
+  background-color: rgb(3, 13, 54);
+  border-bottom: 1px solid rgb(32, 32, 1);
+  /* display: flex;
+  justify-content: space-between;
+  align-items: flex-end; */
+  /* padding: 0 10rem */
+}
+
+.navbarcontent {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end
+}
+
+.navbarcontent h1 {
+  font-family: 'Girassol', cursive;
+  color:rgb(206, 69, 27);
+  font-size: 2rem;
+}
+
+.navbarcontent ul {
+  list-style: none;
+}
+
+.navbarcontent li {
+  display: inline;
+  margin-right: 1rem;
+  font-family: 'Girassol', cursive;
+  color:rgb(206, 69, 27);
+  font-size: 1.5rem;
+}
+
+.main {
+  grid-column: 2/3;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-rows: 50px minmax(700px, auto) 75px;
+  }
+
+  .navbarcontent h1{
+    font-size: 1.5rem;
+  }
+
+  .navbarcontent li{
+    font-size: 1rem;
+  }
+
+  .main {
+    grid-column: 1/-1;
+  }
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { 
+  .layout {
+  grid-template-rows: 50px minmax(1000px, auto) 75px;
+  }
+  
+}
