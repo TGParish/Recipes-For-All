@@ -1,14 +1,22 @@
 import classes from './layout.module.scss';
-// import Navbar from './navbar';
+import Link from 'next/link';
 
 export default function Layout(props) {
   return (
     <div className={classes.layout}>
       <nav className={classes.navbar}>
         <div className={classes.navbarcontent}>
-          <h1>Recipes For All</h1>
+          <Link href="/">
+            <h1>
+              <a>Recipes For All</a>
+            </h1>
+          </Link>
           <ul>
-            <li>About</li>
+            <Link href="/about">
+              <li>
+                <a>About</a>
+              </li>
+            </Link>
             <li>Contact</li>
           </ul>
         </div>

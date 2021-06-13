@@ -4,14 +4,14 @@
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 50px minmax(900px, auto) 75px;
-  background-color: rgb(3, 16, 26);
+  background-color: var(--bgblue);
 }
 
 .navbar {
   grid-row: 1/2;
   grid-column: 1/-1;
-  background-color: rgb(3, 13, 54);
-  border-bottom: 1px solid rgb(32, 32, 1);
+  background-color: var(--navbarblue);
+  border-bottom: 1px solidvar(--navbarborder);
   /* display: flex;
   justify-content: space-between;
   align-items: flex-end; */
@@ -22,13 +22,14 @@
   height: 100%;
   display: flex;
   justify-content: space-around;
-  align-items: flex-end
+  align-items: flex-end;
 }
 
 .navbarcontent h1 {
   font-family: 'Girassol', cursive;
-  color:rgb(206, 69, 27);
+  color: rgb(206, 69, 27);
   font-size: 2rem;
+  cursor: pointer;
 }
 
 .navbarcontent ul {
@@ -39,8 +40,9 @@
   display: inline;
   margin-right: 1rem;
   font-family: 'Girassol', cursive;
-  color:rgb(206, 69, 27);
+  color: rgb(206, 69, 27);
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .main {
@@ -52,11 +54,11 @@
     grid-template-rows: 50px minmax(700px, auto) 75px;
   }
 
-  .navbarcontent h1{
+  .navbarcontent h1 {
     font-size: 1.5rem;
   }
 
-  .navbarcontent li{
+  .navbarcontent li {
     font-size: 1rem;
   }
 
@@ -65,11 +67,8 @@
   }
 }
 
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px)  { 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .layout {
-  grid-template-rows: 50px minmax(1000px, auto) 75px;
+    grid-template-rows: 50px minmax(1000px, auto) 75px;
   }
-  
 }

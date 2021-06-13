@@ -3,7 +3,22 @@ import Head from 'next/head';
 import Search from '../components/search/search';
 import Results from '../components/results/results';
 
-export default function Home() {
+const apiEndPoint = `https://www.themealdb.com/api/json/v1/1/search.php?s=chicken`;
+
+export async function getServerSideProps() {
+  const res = await fetch(apiEndPoint);
+  const data = await res.json();
+  return {
+    props: {
+      data,
+    },
+  };
+}
+
+export default function Home({ data }) {
+  const { meals = [] } = data;
+
+  console.log(data.meals);
   return (
     <>
       <Head>
@@ -11,7 +26,6 @@ export default function Home() {
         <meta name="description" content="A simple recipe website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Search />
       <Results />
     </>
   );

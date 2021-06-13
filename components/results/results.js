@@ -1,40 +1,48 @@
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import classes from './results.module.scss';
-import axios from 'axios';
+import Search from '../search/search';
+import DisplayRecipeCards from '../displayrecipecards/displayrecipecards';
 
 export default function Results() {
-  const [meal, setMeal] = useState('');
+  const [recipes, setRecipes] = useState([]);
+  const [searchResult, setSearchResult] = useState('');
+  const [query, setQuery] = useState('');
+  // const [currentMeal, setCurrentmeal] = useState('');
 
   useEffect(() => {
-    async function getMeal() {
+    async function getRecipes() {
+      if (!query) return;
       try {
         const res = await fetch(
-          'https://www.themealdb.com/api/json/v1/1/search.php?s=chicken'
+          `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`
         );
         const data = await res.json();
 
-        setMeal(data.meals[3]);
+        setRecipes(data.meals);
+        console.log(data.meals);
+        // console.log(data.meals);
       } catch (error) {
         console.error(error);
       }
     }
 
-    getMeal();
-  }, []);
+    getRecipes();
+  }, [query]);
 
-  const { strMealThumb, strMeal, strInstructions, strArea, strCategory } = meal;
+  const updateSearch = (e) => {
+    setSearchResult(e.target.value);
+    // console.log(searchResult);
+  };
+
+  const getSearch = (e) => {
+    e.preventDefault();
+    setQuery(searchResult);
+  };
 
   return (
-    <div className={classes.cards}>
-      <div className={classes.card}>
-        <img src={strMealThumb} alt={strMeal} />
-        <h2 className={classes.name}>{strMeal}</h2>
-        <p className={classes.description}>
-          {strInstructions.substring(0, 150) + '...'}
-        </p>
-        <button className={classes.btn}>View More</button>
-      </div>
-    </div>
+    <>
+      <Search search={searchResult} handler={updateSearch} submit={getSearch} />
+      {query && recipes && <DisplayRecipeCards display={recipes} />}
+      {!recipes && <h1 className={classes.query_message}>No recipes found</h1>}
+    </>
   );
 }

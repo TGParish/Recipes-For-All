@@ -15,15 +15,30 @@
   align-items: center;
 }
 
-.searchwrapper input {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  width: 300px;
-  height: 35px;
+.search {
+  // display: flex;
+  // align-content: center;
+}
+
+.search input {
+  font-family: 'Times New Roman', Times, serif;
+
+  height: 2.4rem;
   font-size: 1.7rem;
-  padding: 0.5rem;
-  border-radius: 15px;
+  // padding: 0.2rem;
+  border-radius: 3px;
   background-color: rgb(235, 235, 224);
 }
-.searchwrapper input:focus {
+.search input:focus {
   outline: 3px solid rgb(206, 69, 27);
+}
+
+.search button {
+  margin-left: 1rem;
+  border: 3px solid var(--tigerblood);
+  background-color: transparent;
+  color: rgb(235, 235, 224);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 3px;
 }
