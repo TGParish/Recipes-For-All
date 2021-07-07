@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import Search from '../search/search';
 import DisplayRecipeCards from '../displayrecipecards/displayrecipecards';
+import classes from './results.module.scss';
 
 export default function Results() {
   const [recipes, setRecipes] = useState([]);
   const [searchResult, setSearchResult] = useState('');
   const [query, setQuery] = useState('');
-  // const [currentMeal, setCurrentmeal] = useState('');
 
   useEffect(() => {
     async function getRecipes() {
@@ -18,7 +18,6 @@ export default function Results() {
         const data = await res.json();
 
         setRecipes(data.meals);
-        console.log(data.meals);
         // console.log(data.meals);
       } catch (error) {
         console.error(error);
@@ -37,6 +36,25 @@ export default function Results() {
     e.preventDefault();
     setQuery(searchResult);
   };
+
+  // Sets search result to data from local storage
+  useEffect(() => {
+    const data = localStorage.getItem('search-state');
+    const parsedData = JSON.parse(data);
+    setSearchResult(parsedData);
+  }, []);
+
+  // Sets query results to data from local storage to display cards
+  useEffect(() => {
+    const data = localStorage.getItem('search-state');
+    const parsedData = JSON.parse(data);
+    setQuery(parsedData);
+  }, []);
+
+  // Saves search result to local storage
+  useEffect(() => {
+    localStorage.setItem('search-state', JSON.stringify(searchResult));
+  });
 
   return (
     <>

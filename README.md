@@ -15,5 +15,5 @@
 
 # future implementation
 
-3. The user will be able to create an account and log into to manage their saved recipes
-4. The user will be able to click a heart icon that adds the recipe to their list
+1. The user will be able to create an account and log into to manage their saved recipes
+2. The user will be able to click a heart icon that adds the recipe to their list

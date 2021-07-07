@@ -9,36 +9,38 @@
 }
 
 .searchwrapper {
-  height: 100px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .search {
-  // display: flex;
-  // align-content: center;
+  display: flex;
+  align-content: center;
+  // margin-top: 3rem;
 }
 
 .search input {
   font-family: 'Times New Roman', Times, serif;
-
-  height: 2.4rem;
+  border: 1px solid black;
+  padding: 0.2rem;
+  height: 100%;
   font-size: 1.7rem;
   // padding: 0.2rem;
-  border-radius: 3px;
+  // border-radius: 30px;
   background-color: rgb(235, 235, 224);
 }
 .search input:focus {
-  outline: 3px solid rgb(206, 69, 27);
+  outline: 2px solid var(--linkgreen);
 }
 
 .search button {
   margin-left: 1rem;
-  border: 3px solid var(--tigerblood);
-  background-color: transparent;
-  color: rgb(235, 235, 224);
+  border: none;
+  background-color: var(--linkgreen);
+  color: whitesmoke;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0 0.5rem;
   border-radius: 3px;
 }

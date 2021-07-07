@@ -11,14 +11,6 @@ export default function Layout(props) {
               <a>Recipes For All</a>
             </h1>
           </Link>
-          <ul>
-            <Link href="/about">
-              <li>
-                <a>About</a>
-              </li>
-            </Link>
-            <li>Contact</li>
-          </ul>
         </div>
       </nav>
       <main className={classes.main}>{props.children}</main>

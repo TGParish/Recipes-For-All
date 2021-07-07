@@ -1,4 +1,46 @@
 .card {
-  color: white;
-  border: 3px solid var(--tigerblood);
+  margin-top: 3rem;
+  color: black;
+  border: 1px solid var(--tigerblood);
+  background-color: var(--navbarblue);
+  padding: 1rem;
+  .mealDetails {
+    display: flex;
+    flex-direction: column;
+    // justify-content: spa;
+    align-items: center;
+    .name {
+      margin-top: 1rem;
+    }
+    img {
+      max-width: 500px;
+      margin-top: 1.5rem;
+      border-radius: 1rem;
+    }
+  }
+  .ingredients {
+    margin-top: 1rem;
+    margin-bottom: 0.6rem;
+    li {
+      margin-bottom: 1rem;
+    }
+  }
+  .directions {
+    margin-top: 1rem;
+    h2 {
+      margin-bottom: 0.2rem;
+    }
+    p {
+      line-height: 200%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    margin: 1rem 1rem;
+    img {
+      width: 10rem;
+    }
+  }
 }
