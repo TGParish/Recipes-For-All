@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 .card {
   margin-top: 3rem;
   color: black;
@@ -11,6 +13,7 @@
     align-items: center;
     .name {
       margin-top: 1rem;
+      font-family: 'Dancing Script', cursive;
     }
     img {
       max-width: 500px;

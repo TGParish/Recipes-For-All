@@ -24,12 +24,13 @@
 .search input {
   font-family: 'Times New Roman', Times, serif;
   border: 1px solid black;
+  border-radius: 3px;
   padding: 0.2rem;
   height: 100%;
   font-size: 1.7rem;
   // padding: 0.2rem;
   // border-radius: 30px;
-  background-color: rgb(235, 235, 224);
+  background-color: whitesmoke;
 }
 .search input:focus {
   outline: 2px solid var(--linkgreen);
@@ -43,4 +44,8 @@
   cursor: pointer;
   padding: 0 0.5rem;
   border-radius: 3px;
+}
+
+.search button:hover {
+  background-color: rgb(56, 104, 8);
 }

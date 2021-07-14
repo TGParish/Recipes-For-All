@@ -7,6 +7,7 @@ export default function Results() {
   const [recipes, setRecipes] = useState([]);
   const [searchResult, setSearchResult] = useState('');
   const [query, setQuery] = useState('');
+  const [failure, setFailure] = useState(false);
 
   useEffect(() => {
     async function getRecipes() {
@@ -20,6 +21,7 @@ export default function Results() {
         setRecipes(data.meals);
         // console.log(data.meals);
       } catch (error) {
+        setFailure(true);
         console.error(error);
       }
     }
@@ -59,6 +61,11 @@ export default function Results() {
   return (
     <>
       <Search search={searchResult} handler={updateSearch} submit={getSearch} />
+      {failure && (
+        <h1 className={classes.failure}>
+          An error occured, please try again 🧸
+        </h1>
+      )}
       {query && recipes && <DisplayRecipeCards display={recipes} />}
       {!recipes && <h1 className={classes.query_message}>No recipes found</h1>}
     </>

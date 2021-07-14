@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
 .cards {
   display: grid;
@@ -28,6 +29,7 @@
   .name {
     padding-top: 1rem;
     margin: 0 2rem;
+    font-family: 'Dancing Script', cursive;
   }
 
   // .category {
@@ -47,6 +49,10 @@
     cursor: pointer;
     margin-bottom: 1rem;
   }
+}
+
+.failure {
+  text-align: center;
 }
 
 .query_message {

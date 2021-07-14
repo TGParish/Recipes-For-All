@@ -4,7 +4,7 @@
 .layout {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 50px minmax(900px, auto) 75px;
+  grid-template-rows: 75px minmax(900px, auto) 75px;
   background-color: var(--bgblue);
 }
 
@@ -12,7 +12,8 @@
   grid-row: 1/2;
   grid-column: 1/-1;
   background-color: var(--navbarblue);
-  border-bottom: 1px solid var(--navbarborder);
+  // border-bottom: 1px solid var(--navbarborder);
+  // box-shadow: 1px 10px 20px 5px rgb(71, 67, 67);
   /* display: flex;
   justify-content: space-between;
   align-items: flex-end; */
@@ -23,7 +24,7 @@
   height: 100%;
   display: flex;
   justify-content: space-around;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .navbarcontent h1 {
