@@ -3,8 +3,8 @@
 .card {
   margin-top: 3rem;
   color: black;
-  border: 1px solid var(--tigerblood);
-  background-color: var(--navbarblue);
+  box-shadow: var(--box-shadowII);
+  border-radius: 3px;
   padding: 1rem;
   .mealDetails {
     display: flex;
