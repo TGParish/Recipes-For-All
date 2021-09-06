@@ -30,7 +30,7 @@
   font-size: 1.7rem;
   // padding: 0.2rem;
   // border-radius: 30px;
-  background-color: whitesmoke;
+  background-color: var(--bgblue);
 }
 .search input:focus {
   outline: 2px solid var(--linkgreen);
@@ -40,7 +40,7 @@
   margin-left: 1rem;
   border: none;
   background-color: var(--linkgreen);
-  color: whitesmoke;
+  color: var(--bgblue);
   cursor: pointer;
   padding: 0 0.5rem;
   border-radius: 3px;
