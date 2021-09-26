@@ -16,7 +16,11 @@ export default function DisplayRecipeCards(props) {
       {props.display.map((meal) => (
         <div className={classes.card}>
           <img src={meal.strMealThumb} alt={meal.strMeal} />
-          <h2 className={classes.name}>{meal.strMeal}</h2>
+          <h2 className={classes.name}>
+            {meal.strMeal.length > 25
+              ? meal.strMeal.substring(0, 24) + '...'
+              : meal.strMeal}
+          </h2>
           <p className={classes.description}>
             {meal.strInstructions.substring(0, 75) + '...'}
           </p>

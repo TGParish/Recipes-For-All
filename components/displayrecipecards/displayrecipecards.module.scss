@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   gap: 1.5rem;
+  // grid-gap: 1.5rem;
   place-items: center;
 }
 
@@ -22,9 +23,12 @@
   background-color: var(--bgblue);
   // border: 1px solid var(--tigerblood);
   box-shadow: var(--box-shadowII);
+
+  // box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+
   border-radius: 3px;
   height: 40rem;
-  width: 25rem;
+  width: 100%;
   color: black;
   .name {
     padding-top: 1rem;
@@ -62,7 +66,7 @@
 }
 
 @media (max-width: 768px) {
-  .card {
-    width: 22rem;
+  .cards {
+    margin: 0 1rem;
   }
 }
