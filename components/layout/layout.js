@@ -8,7 +8,7 @@ export default function Layout(props) {
         <div className={classes.navbarcontent}>
           <Link href="/">
             <h1>
-              <a>Recipes For All</a>
+              <a className={classes.heading}>Recipes For All</a>
             </h1>
           </Link>
         </div>

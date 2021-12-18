@@ -33,13 +33,13 @@
   background-color: var(--bgblue);
 }
 .search input:focus {
-  outline: 2px solid var(--linkgreen);
+  outline: 2px solid var(--button-color);
 }
 
 .search button {
   margin-left: 1rem;
   border: none;
-  background-color: var(--linkgreen);
+  background-color: var(--button-color);
   color: var(--bgblue);
   cursor: pointer;
   padding: 0 0.5rem;
@@ -47,5 +47,5 @@
 }
 
 .search button:hover {
-  background-color: rgb(56, 104, 8);
+  background-color: var(--button-color-hover);
 }

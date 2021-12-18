@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 
 .card {
+  // grid-template-columns: minmax(30rem, 1fr);
+  min-width: 25rem;
   margin-top: 3rem;
+  margin-bottom: 3rem;
   color: black;
   box-shadow: var(--box-shadowII);
   border-radius: 3px;
@@ -12,11 +16,11 @@
     // justify-content: spa;
     align-items: center;
     .name {
-      margin-top: 1rem;
-      font-family: 'Dancing Script', cursive;
+      padding-top: 1rem;
+      font-family: 'Prata', serif;
     }
     img {
-      max-width: 500px;
+      max-width: 80%;
       margin-top: 1.5rem;
       border-radius: 1rem;
     }
@@ -35,15 +39,6 @@
     }
     p {
       line-height: 200%;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .card {
-    margin: 1rem 1rem;
-    img {
-      width: 10rem;
     }
   }
 }

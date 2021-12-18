@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 
 .layout {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 75px minmax(900px, auto) 75px;
+  // grid-template-rows: 75px minmax(900px, auto) 75px;
   background-color: var(--bgblue);
 }
 
@@ -27,9 +28,16 @@
   align-items: center;
 }
 
-.navbarcontent h1 {
-  font-family: 'Dancing Script', cursive;
-  color: rgb(27, 206, 57);
+// .navbarcontent h1 {
+//   font-family: 'Secular One', sans-serif;
+//   color: var(--heading-color);
+//   font-size: 2rem;
+//   cursor: pointer;
+// }
+
+.heading {
+  font-family: 'Secular One', sans-serif;
+  color: var(--heading-color);
   font-size: 2rem;
   cursor: pointer;
 }
@@ -38,38 +46,30 @@
   list-style: none;
 }
 
-.navbarcontent li {
-  display: inline;
-  margin-right: 1rem;
-  color: rgb(206, 69, 27);
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
 .main {
   grid-column: 2/3;
 }
 
-@media (max-width: 768px) {
-  .layout {
-    grid-template-rows: 40px minmax(700px, auto) 75px;
-  }
+// @media (max-width: 768px) {
+//   .layout {
+//     grid-template-rows: 40px minmax(700px, auto) 75px;
+//   }
 
-  .navbarcontent h1 {
-    font-size: 1.5rem;
-  }
+//   .navbarcontent h1 {
+//     font-size: 1.5rem;
+//   }
 
-  .navbarcontent li {
-    font-size: 1rem;
-  }
+//   .navbarcontent li {
+//     font-size: 1rem;
+//   }
 
-  .main {
-    grid-column: 1/-1;
-  }
-}
+//   .main {
+//     grid-column: 1/-1;
+//   }
+// }
 
-@media (max-width: 1024px) {
-  .layout {
-    grid-template-rows: 40px minmax(1000px, auto) 75px;
-  }
-}
+// @media (max-width: 1024px) {
+//   .layout {
+//     grid-template-rows: 40px minmax(1000px, auto) 75px;
+//   }
+// }
