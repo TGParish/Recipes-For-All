@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 
 .card {
   // grid-template-columns: minmax(30rem, 1fr);
-  min-width: 25rem;
+  min-width: 22rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
   color: black;
@@ -16,8 +17,8 @@
     // justify-content: spa;
     align-items: center;
     .name {
+      font-family: 'Secular One', sans-serif;
       padding-top: 1rem;
-      font-family: 'Prata', serif;
     }
     img {
       max-width: 80%;
@@ -40,6 +41,7 @@
   }
   .directions {
     margin-top: 1rem;
+    white-space: pre-line;
     h2 {
       margin-bottom: 0.2rem;
     }

@@ -6,10 +6,10 @@ import classes from './displayrecipecards.module.scss';
 export default function DisplayRecipeCards(props) {
   const router = useRouter();
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    router.push('/recipes/[slug]');
-  };
+  // const handleClick = (e) => {
+  //   e.preventDefault();
+  //   router.push('/recipes/[slug]');
+  // };
 
   return (
     <div className={classes.cards}>

@@ -1,4 +1,4 @@
-import classes from '../../../styles/recipe.module.scss';
+import classes from './recipe.module.scss';
 
 const apiEndPoint = `https://www.themealdb.com/api/json/v1/1/`;
 
@@ -18,12 +18,12 @@ export default function Recipes({ data }) {
   const { strMeal, strMealThumb, strInstructions } = dataMeals;
 
   return (
-    <main className={classes.card}>
-      <header className={classes.mealDetails}>
+    <div className={classes.card}>
+      <div className={classes.mealDetails}>
         <img src={strMealThumb} alt={strMeal} />
         <h1 className={classes.name}>{strMeal}</h1>
-      </header>
-      <section className={classes.ingredientsContainer}>
+      </div>
+      <div className={classes.ingredientsContainer}>
         <h2 className={classes.ingredients}>Ingredients:</h2>
         <ul className={classes.ingredientsList}>
           <li>
@@ -87,11 +87,11 @@ export default function Recipes({ data }) {
             {dataMeals.strMeasure20} {dataMeals.strIngredient20}
           </li>
         </ul>
-      </section>
-      <article className={classes.directions}>
+      </div>
+      <div className={classes.directions}>
         <h2>Directions:</h2>
         <p>{strInstructions}</p>
-      </article>
-    </main>
+      </div>
+    </div>
   );
 }

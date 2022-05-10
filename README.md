@@ -1,3 +1,3 @@
-# Recipe website
+# No Bloat Recipes
 
-This website utilizes the themealdb.com API, allowing users to search the databse. No ads or trackers!
+This no bloat website utilizes the mealdb.com API, allowing users to search for recipes without the fluff.

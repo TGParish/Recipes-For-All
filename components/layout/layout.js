@@ -5,13 +5,13 @@ export default function Layout(props) {
   return (
     <div className={classes.layout}>
       <nav className={classes.navbar}>
-        <div className={classes.navbarcontent}>
+        <section className={classes.navbarcontent}>
           <Link href="/">
             <h1>
-              <a className={classes.heading}>Recipes For All</a>
+              <a className={classes.heading}>No Bloat Recipes</a>
             </h1>
           </Link>
-        </div>
+        </section>
       </nav>
       <main className={classes.main}>{props.children}</main>
     </div>
